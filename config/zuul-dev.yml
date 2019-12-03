@@ -1,0 +1,10 @@
+server:
+  port: 3001
+spring:  application:    name: zuul
+eureka:  client:    service-url:      defaultZone: http://eurekal:2001/eureka,http://eureka2:2002/eureka
+zuul:
+  routes:    item-service: /item-service/** #做网关,
+    user-service: /user-service/** #注解接口上的地址
+    order-service: /order-service/** #服务器名::服务器的访问的路径
+    
+ 
